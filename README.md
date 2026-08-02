@@ -1,18 +1,60 @@
-# React + Vite
+# 🌱 Agrios - Sustainable Organic Farming
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Agrios is a modern and responsive agriculture website built using **React** and **Vite**. The project showcases sustainable and organic farming practices through an engaging user interface with smooth navigation and reusable React components.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- 🌾 Modern and responsive design
+- 📱 Mobile-friendly layout
+- ⚡ Fast performance with Vite
+- 🧩 Reusable React components
+- 🎨 Clean and attractive UI
+- 🌿 Organic farming information
+- 📞 Contact section
+- 🖼️ Image gallery and farming showcase
 
-## React Compiler
+## 🛠️ Tech Stack
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+- React.js
+- Vite
+- JavaScript (ES6+)
+- HTML5
+- CSS3
+- React Hooks
 
-Note: This will impact Vite dev & build performances.
+## 📂 Project Structure
 
-## Expanding the ESLint configuration
+```
+src/
+├── assets/
+├── components/
+├── hooks/
+├── App.jsx
+├── App.css
+├── main.jsx
+└── index.css
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+public/
+index.html
+```
+
+
+## 🎯 Purpose
+
+This project was developed to practice and demonstrate modern frontend development using React while creating an attractive website focused on sustainable agriculture and organic farming.
+
+
+
+## 🤝 Contributing
+
+Contributions are welcome. Feel free to fork the repository and submit a pull request.
+
+
+## 👨‍💻 Developer
+
+**Devesh Dhanwani**
+
+- GitHub: https://github.com/Devesh517
+- LinkedIn: https://www.linkedin.com/in/devesh-dhanwani-9351a2312/
+
+---
