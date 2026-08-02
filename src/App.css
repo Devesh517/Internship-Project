@@ -1,0 +1,255 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap");
+
+/* -------------------------------------------------- */
+/* Design tokens — green / earthy agriculture palette   */
+/* -------------------------------------------------- */
+:root {
+  --color-forest: #2f5233;
+  --color-forest-dark: #1c331f;
+  --color-leaf: #6faf4f;
+  --color-leaf-light: #9ccb6e;
+  --color-leaf-tint: #e6f0da;
+  --color-cream: #f8f7f2;
+  --color-ink: #23301f;
+  --color-muted: #5f6b58;
+  --color-border: #e4e3da;
+
+  --max-width: 1200px;
+  --section-padding: 100px;
+}
+
+/* -------------------------------------------------- */
+/* Reset                                                */
+/* -------------------------------------------------- */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Fixed navbar sits on top of the page — offset scroll targets so
+   section headings aren't hidden underneath it when navigating via
+   anchor links or the smooth-scroll helpers in Navbar/Footer. */
+section[id] {
+  scroll-margin-top: 88px;
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  color: var(--color-ink);
+  background: var(--color-cream);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  font-family: inherit;
+}
+
+ul {
+  margin: 0;
+}
+
+/* Visible keyboard-focus state — interactive elements only had :hover
+   styling before, so keyboard/tab users had no way to see focus. */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--color-leaf);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  * {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+/* -------------------------------------------------- */
+/* Layout helpers                                       */
+/* -------------------------------------------------- */
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section {
+  padding: var(--section-padding) 0;
+}
+
+.section--tint {
+  background: #eef4e7;
+}
+
+.section--forest {
+  background: var(--color-forest-dark);
+}
+
+.section__head {
+  max-width: 640px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.section__head--light {
+  color: #fff;
+}
+
+.section__eyebrow {
+  display: inline-block;
+  color: var(--color-forest);
+  background: var(--color-leaf-tint);
+  padding: 6px 16px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.section__eyebrow--light {
+  background: rgba(139, 195, 74, 0.18);
+  color: var(--color-leaf-light);
+}
+
+.section__heading {
+  font-size: clamp(1.8rem, 3.2vw, 2.6rem);
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--color-ink);
+  margin-bottom: 16px;
+}
+
+.section__heading--light {
+  color: #fff;
+}
+
+.section__subtext {
+  color: var(--color-muted);
+  font-size: 1.02rem;
+  line-height: 1.7;
+}
+
+/* -------------------------------------------------- */
+/* Buttons                                              */
+/* -------------------------------------------------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px 30px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease,
+    color 0.2s ease;
+  border: 2px solid transparent;
+}
+
+.btn--primary {
+  background: var(--color-leaf);
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(111, 175, 79, 0.35);
+}
+
+.btn--primary:hover {
+  background: var(--color-forest);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 26px rgba(47, 82, 51, 0.35);
+}
+
+.btn--outline-light {
+  background: transparent;
+  border-color: rgba(255, 255, 255, 0.6);
+  color: #fff;
+}
+
+.btn--outline-light:hover {
+  background: #fff;
+  color: var(--color-forest);
+  transform: translateY(-2px);
+}
+
+/* -------------------------------------------------- */
+/* Scroll-reveal animations (paired with useScrollReveal) */
+/* -------------------------------------------------- */
+.reveal {
+  opacity: 0;
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal--up {
+  transform: translateY(28px);
+}
+
+.reveal--left {
+  transform: translateX(-32px);
+}
+
+.reveal--right {
+  transform: translateX(32px);
+}
+
+.reveal--visible {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+/* -------------------------------------------------- */
+/* Responsive section spacing                           */
+/* -------------------------------------------------- */
+@media (max-width: 1023px) {
+  :root {
+    --section-padding: 72px;
+  }
+}
+
+@media (max-width: 767px) {
+  :root {
+    --section-padding: 56px;
+  }
+
+  .container {
+    padding: 0 18px;
+  }
+}
